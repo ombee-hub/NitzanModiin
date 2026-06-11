@@ -1,0 +1,270 @@
+﻿/* =============================================
+   ניצן מודיעין — מערכת עיצוב
+   עיצוב: עומרי בן אליהו
+   ============================================= */
+:root{
+  /* כחול הלוגו: #0053A0 */
+  --teal:#0053a0;
+  --teal-dark:#062f5c;
+  --teal-mid:#00468a;
+  --teal-light:#e3edf7;
+  --coral:#0053a0;
+  --coral-dark:#00468a;
+  --coral-soft:#e3edf7;
+  --amber:#9cc4ee;
+  --amber-soft:#e3edf7;
+  --lav-soft:#e3edf7;
+  --cream:#fbf7f1;
+  --ink:#22313a;
+  --ink-soft:#5b6b75;
+  --white:#ffffff;
+  --radius:22px;
+  --shadow:0 10px 40px rgba(6,47,92,.10);
+  --shadow-sm:0 4px 18px rgba(6,47,92,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Assistant',sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;font-size:17px}
+h1,h2,h3,h4{font-family:'Assistant',sans-serif;line-height:1.25;color:var(--teal-dark)}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin-inline:auto}
+.narrow{width:min(880px,92%);margin-inline:auto}
+
+/* ---------- כפתורים ---------- */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:12px;font-weight:700;font-size:16px;transition:.25s;cursor:pointer;border:none;font-family:'Assistant'}
+.btn-coral{background:var(--coral);color:#fff;box-shadow:0 8px 22px rgba(0,83,160,.30)}
+.btn-coral:hover{background:#00468a;transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55)}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:var(--teal-mid);transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--coral-dark)}
+.btn-light:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.18)}
+
+/* ---------- פס עליון דק ---------- */
+.topstrip{height:5px;background:linear-gradient(90deg,var(--teal-dark),var(--teal) 50%,#1d77c9)}
+
+/* ---------- כותרת עליונה ---------- */
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(6,47,92,.07)}
+.nav{display:flex;align-items:center;justify-content:flex-start;padding:12px 0;gap:26px}
+.nav .cta-btn{margin-inline-start:auto}
+.logo{display:flex;align-items:center;gap:14px}
+.logo img{height:62px;width:auto}
+.logo .name{line-height:1.3}
+.logo .name small{display:block;font-family:'Assistant';font-weight:500;font-size:13px;color:var(--ink-soft);border-inline-start:2px solid var(--teal-light);padding-inline-start:12px;max-width:120px}
+nav.main>ul{display:flex;list-style:none;gap:2px;align-items:center}
+nav.main>ul>li{position:relative}
+nav.main a{display:block;padding:9px 13px;border-radius:12px;font-weight:600;font-size:15.5px;color:var(--ink);transition:.2s;white-space:nowrap}
+nav.main>ul>li>a:hover,nav.main>ul>li>a.active{background:var(--teal-light);color:var(--teal)}
+nav.main .has-sub>a::after{content:" ▾";font-size:11px;color:var(--ink-soft)}
+nav.main .sub{position:absolute;top:100%;inset-inline-start:0;background:#fff;border-radius:16px;box-shadow:var(--shadow);list-style:none;min-width:200px;padding:10px;opacity:0;visibility:hidden;transform:translateY(8px);transition:.22s;z-index:60}
+nav.main li:hover>.sub,nav.main li:focus-within>.sub{opacity:1;visibility:visible;transform:translateY(4px)}
+nav.main .sub a{padding:9px 14px;border-radius:10px;font-weight:500;font-size:15px}
+nav.main .sub a:hover{background:var(--teal-light);color:var(--teal)}
+.nav .cta-btn{flex:none}
+.hamburger{display:none;background:none;border:none;font-size:26px;color:var(--teal-dark);cursor:pointer;padding:6px}
+
+/* ---------- כותרת דף פנימי ---------- */
+.page-hero{position:relative;background:linear-gradient(118deg,var(--teal-dark) 0%,var(--teal) 62%,#1d77c9 100%);color:#fff;overflow:hidden}
+.page-hero::after{content:"";position:absolute;inset:0;background:radial-gradient(620px 360px at 10% 120%,rgba(156,196,238,.20),transparent 60%)}
+.page-hero .container{position:relative;z-index:2;padding:66px 0 86px;max-width:880px;text-align:center}
+.page-hero .kicker{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.22)}
+.page-hero h1{color:#fff;font-size:clamp(30px,4vw,46px);font-weight:800;margin-bottom:14px}
+.page-hero p{font-size:18.5px;color:rgba(255,255,255,.88);font-weight:300;max-width:38em;margin-inline:auto}
+.page-hero .crumbs{margin-top:22px;font-size:14px;color:rgba(255,255,255,.65)}
+.page-hero .crumbs a{color:rgba(255,255,255,.85);font-weight:500}
+.page-hero .crumbs a:hover{color:#fff}
+.wave{display:block;width:100%;margin-top:-1px}
+
+/* ---------- מקטעים ---------- */
+section{padding:78px 0}
+.sec-head{text-align:center;max-width:46em;margin:0 auto 50px}
+.kicker{display:inline-block;background:var(--coral-soft);color:var(--coral-dark);font-weight:700;font-size:14px;padding:6px 18px;border-radius:999px;margin-bottom:14px;letter-spacing:.3px}
+.kicker.teal{background:var(--teal-light);color:var(--teal)}
+.sec-head h2{font-size:clamp(26px,3.2vw,38px);font-weight:800;margin-bottom:14px}
+.sec-head p{color:var(--ink-soft);font-size:17.5px}
+
+/* טקסט רץ */
+.prose{color:var(--ink);font-size:17.5px}
+.prose p{margin-bottom:18px;color:#3a4a53}
+.prose h2{font-size:28px;margin:38px 0 16px}
+.prose h3{font-size:22px;margin:30px 0 12px}
+.prose ul{margin:0 0 18px;padding-inline-start:0;list-style:none;display:grid;gap:10px}
+.prose ul li{display:flex;gap:12px;align-items:flex-start;color:#3a4a53}
+.prose ul li::before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;background:var(--teal-light);color:var(--teal);display:grid;place-items:center;font-size:13px;font-weight:800;margin-top:4px}
+
+/* פריסת טקסט+תמונה */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split.rev{direction:ltr}
+.split.rev>*{direction:rtl}
+.split .photo{border-radius:26px;overflow:hidden;box-shadow:var(--shadow)}
+.split .photo img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+
+/* כרטיסים */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.cards.three{grid-template-columns:repeat(3,1fr)}
+.cards.two{grid-template-columns:repeat(2,1fr)}
+.card{background:#fff;border-radius:var(--radius);padding:34px 26px;box-shadow:var(--shadow-sm);transition:.28s;border:1px solid transparent;position:relative;display:flex;flex-direction:column}
+.card>p{flex:1}
+.card .btn{margin-top:20px;width:100%;justify-content:center}
+.card:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:var(--teal-light)}
+.card .ic{width:62px;height:62px;border-radius:18px;display:grid;place-items:center;font-size:28px;margin-bottom:20px}
+.card .ic img{width:38px;height:38px;object-fit:contain}
+.ic.c1{background:var(--teal-light)}.ic.c2{background:var(--coral-soft)}.ic.c3{background:var(--amber-soft)}.ic.c4{background:var(--lav-soft)}
+.card h3{font-size:20px;margin-bottom:10px}
+.card p{color:var(--ink-soft);font-size:15.5px}
+.card .more{display:inline-block;margin-top:16px;color:var(--teal);font-weight:700;font-size:15px}
+.card .more::after{content:"←";margin-inline-start:6px;transition:.2s;display:inline-block}
+.card:hover .more::after{transform:translateX(-4px)}
+
+/* גלריה */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.gallery.four{grid-template-columns:repeat(4,1fr)}
+.g-item{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--shadow-sm);aspect-ratio:4/3;background:#e8e4dc}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:.45s}
+.g-item:hover img{transform:scale(1.06)}
+.g-item .cap{position:absolute;inset-inline:0;bottom:0;background:linear-gradient(transparent,rgba(6,47,92,.82));color:#fff;font-size:14px;font-weight:500;padding:26px 16px 12px;opacity:0;transition:.3s}
+.g-item:hover .cap{opacity:1}
+
+/* ציר זמן / שלבים */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.steps.three{grid-template-columns:repeat(3,1fr)}
+.step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:var(--radius);padding:32px 24px;transition:.25s}
+.step:hover{background:rgba(255,255,255,.11);transform:translateY(-6px)}
+.step .n{font-family:'Assistant';font-weight:800;font-size:46px;color:var(--amber);opacity:.9;line-height:1;margin-bottom:14px}
+.step h3{color:#fff;font-size:19px;margin-bottom:8px}
+.step p{color:rgba(255,255,255,.72);font-size:15px}
+.dark-sec{background:var(--teal-dark);color:#fff}
+.dark-sec .sec-head h2{color:#fff}
+.dark-sec .sec-head p{color:rgba(255,255,255,.75)}
+
+/* כרטיסי סיפורי הצלחה */
+.s-card{background:#fff;border-radius:26px;overflow:hidden;box-shadow:var(--shadow-sm);transition:.28s;display:flex;flex-direction:column}
+.s-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.s-card .photo{aspect-ratio:4/3;overflow:hidden;background:#e8e4dc}
+.s-card .photo img{width:100%;height:100%;object-fit:cover;transition:.45s}
+.s-card:hover .photo img{transform:scale(1.05)}
+.s-card .body{padding:28px 26px;flex:1;display:flex;flex-direction:column}
+.s-card h3{font-size:21px;margin-bottom:10px}
+.s-card p{color:var(--ink-soft);font-size:15.5px;flex:1}
+.s-card .tag{display:inline-block;background:var(--teal-light);color:var(--teal);font-weight:700;font-size:13px;padding:4px 14px;border-radius:999px;margin-bottom:12px;align-self:flex-start}
+.s-card .more{display:inline-block;margin-top:16px;color:var(--teal);font-weight:700;font-size:15px}
+.s-card .more::after{content:"←";margin-inline-start:6px;transition:.2s;display:inline-block}
+.s-card:hover .more::after{transform:translateX(-4px)}
+
+/* בלוק ציטוט / סיפור */
+.story-card{display:grid;grid-template-columns:.9fr 1.1fr;background:linear-gradient(135deg,var(--teal-light),#fff 70%);border-radius:30px;overflow:hidden;box-shadow:var(--shadow)}
+.story-card .photo{min-height:340px;background:#cfdeed}
+.story-card .photo img{width:100%;height:100%;object-fit:cover}
+.story-card .body{padding:48px 48px;display:flex;flex-direction:column;justify-content:center}
+.quote-mark{font-family:'Assistant';font-size:72px;color:var(--coral);line-height:.6;margin-bottom:18px}
+.story-card blockquote{font-size:20px;font-weight:500;color:var(--teal-dark);margin-bottom:22px;line-height:1.6}
+.story-card .who{display:flex;align-items:center;gap:14px}
+.story-card .who .av{width:52px;height:52px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:700;font-family:'Assistant';font-size:19px;overflow:hidden}
+.story-card .who .av img{width:100%;height:100%;object-fit:cover}
+.story-card .who b{display:block;color:var(--teal-dark)}
+.story-card .who span{color:var(--ink-soft);font-size:14.5px}
+
+/* קרוסלת סיפורי הצלחה */
+.st-slider{position:relative}
+.st-stage{display:grid}
+.st-slide{grid-area:1/1;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .75s ease,transform .75s ease,visibility .75s;pointer-events:none}
+.st-slide.on{opacity:1;visibility:visible;transform:none;pointer-events:auto}
+.st-slide .story-card{height:100%}
+.st-slide .story-card .body{justify-content:flex-start}
+.st-slide .story-card blockquote{flex:1}
+.st-slide .story-card .body>div:last-child{margin-top:auto!important;padding-top:22px}
+.st-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:52px;height:52px;border-radius:14px;background:#fff;color:var(--teal);border:none;box-shadow:var(--shadow);font-size:22px;cursor:pointer;display:grid;place-items:center;transition:.2s}
+.st-nav:hover{background:var(--teal);color:#fff;transform:translateY(-50%) scale(1.07)}
+.st-nav.prev{inset-inline-start:-22px}
+.st-nav.next{inset-inline-end:-22px}
+@media (max-width:640px){.st-nav{display:none}}
+
+/* באנר קריאה לפעולה */
+.cta-banner{background:linear-gradient(120deg,var(--teal-dark) 0%,#1d77c9 100%);border-radius:30px;color:#fff;padding:50px 56px;display:grid;grid-template-columns:1.25fr .75fr;gap:36px;align-items:center;box-shadow:0 20px 50px rgba(0,83,160,.35)}
+.cta-banner h2{color:#fff;font-size:clamp(23px,2.8vw,32px);margin-bottom:12px}
+.cta-banner p{color:rgba(255,255,255,.92);font-size:16.5px}
+.cta-banner .side{justify-self:end}
+.cta-banner.teal{background:linear-gradient(120deg,var(--teal-mid),#1d77c9);box-shadow:0 20px 50px rgba(19,122,116,.35)}
+
+/* highlight box */
+.hl-box{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:34px 32px;border-inline-start:6px solid var(--coral)}
+.hl-box.teal{border-color:var(--teal)}
+.hl-box h3{margin-bottom:10px;font-size:21px}
+.hl-box p{color:var(--ink-soft)}
+
+/* ---------- טופס ---------- */
+form.cform{background:#fff;border-radius:26px;padding:42px;box-shadow:var(--shadow-sm)}
+form.cform.on-cream{background:var(--cream)}
+form.cform h3{font-size:22px;margin-bottom:6px}
+form.cform .sub{color:var(--ink-soft);font-size:15px;margin-bottom:26px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.cform input,.cform textarea,.cform select{width:100%;border:1.5px solid #e3e0d8;background:var(--cream);border-radius:14px;padding:14px 16px;font-family:'Assistant';font-size:15.5px;color:var(--ink);transition:.2s}
+form.cform.on-cream input,form.cform.on-cream textarea,form.cform.on-cream select{background:#fff}
+.cform input:focus,.cform textarea:focus,.cform select:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 4px rgba(19,122,116,.12)}
+.cform textarea{min-height:120px;resize:vertical;margin-bottom:16px}
+.cform .btn{width:100%;justify-content:center;font-size:17px}
+
+/* שורות יצירת קשר */
+.c-rows{display:grid;gap:16px}
+.c-row{display:flex;gap:16px;align-items:center;background:#fff;border-radius:18px;padding:18px 20px;box-shadow:var(--shadow-sm)}
+.c-row .ic{flex:none;width:48px;height:48px;border-radius:14px;background:var(--teal-light);display:grid;place-items:center;font-size:22px}
+.c-row b{display:block;font-size:15px;color:var(--teal-dark)}
+.c-row span{color:var(--ink-soft);font-size:15.5px;direction:ltr;unicode-bidi:embed}
+.c-row span.he{direction:rtl}
+
+/* ---------- פוטר ---------- */
+footer.site{background:var(--teal-dark);color:#bdd2e8;padding:64px 0 0;font-size:15px}
+.f-grid{display:grid;grid-template-columns:1.1fr 2.6fr;gap:52px;padding-bottom:46px}
+.f-sitemap .map-title{display:flex;align-items:center;gap:18px;text-align:center;font-size:19px;margin-bottom:26px}
+.f-sitemap .map-title::before,.f-sitemap .map-title::after{content:"";flex:1;height:1px;background:rgba(255,255,255,.18)}
+.f-links{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
+footer.site h4{color:#fff;font-size:17px;margin-bottom:18px}
+footer.site ul{list-style:none;display:grid;gap:10px}
+footer.site a:hover{color:#fff}
+.f-logo{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.f-logo img{height:52px;width:auto;filter:brightness(0) invert(1)}
+.f-logo .name{font-family:'Assistant';font-weight:700;color:#fff;font-size:18px}
+.f-bottom{border-top:1px solid rgba(255,255,255,.12);padding:20px 0;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-size:13.5px;color:#8fa9c7}
+.f-bottom .credit{display:inline-flex;align-items:center;gap:9px;color:#8fa9c7;transition:.2s}
+.f-bottom .credit:hover{color:#fff}
+.f-bottom .credit img{height:22px;width:auto;filter:brightness(0) invert(1);opacity:.85;transition:.2s}
+.f-bottom .credit:hover img{opacity:1}
+.social{display:flex;gap:10px;margin-top:18px}
+.social a{width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.1);display:grid;place-items:center;font-size:17px;font-weight:700;transition:.2s;color:#fff}
+.social a:hover{background:#1d77c9}
+
+/* כפתור נגישות */
+.a11y{position:fixed;bottom:26px;inset-inline-start:26px;z-index:60;width:54px;height:54px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-size:25px;box-shadow:0 10px 28px rgba(6,47,92,.4);cursor:pointer;border:none}
+
+/* אנימציית גילוי */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- רספונסיב ---------- */
+@media (max-width:1060px){
+  nav.main{display:none}
+  .hamburger{display:block}
+  header.site.menu-open nav.main{display:block;position:absolute;top:100%;inset-inline:0;background:#fff;box-shadow:var(--shadow);padding:18px;max-height:calc(100vh - 90px);overflow:auto}
+  header.site.menu-open nav.main>ul{flex-direction:column;align-items:stretch;gap:4px}
+  nav.main .sub{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;padding:0 18px;display:none}
+  nav.main li.open>.sub{display:block}
+}
+@media (max-width:980px){
+  .cards,.steps,.gallery.four{grid-template-columns:repeat(2,1fr)}
+  .cards.three{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .split,.story-card,.cta-banner,.f-grid{grid-template-columns:1fr}
+  .split{gap:32px}
+  .story-card .photo{min-height:260px}
+  .f-links{gap:24px}
+  .cta-banner .side{justify-self:start}
+  section{padding:58px 0}
+}
+@media (max-width:560px){
+  .cards,.cards.three,.steps,.gallery,.gallery.four,.f-grid,.f-links,.frow{grid-template-columns:1fr}
+  .cta-banner{padding:36px 26px}
+  form.cform{padding:28px 22px}
+  .logo .name small{display:none}
+}

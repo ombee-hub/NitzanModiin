@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>יצירת קשר — ניצן מודיעין</title>
+<meta name="description" content="צרו קשר עם מערך דיור ניצן מודיעין — טלפון 052-4538070, רחוב יגאל ידין 43/7 מודיעין.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="images/logo-nitzan.png">
+</head>
+<body data-page="contact">
+
+<div id="site-header"></div>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="kicker">נשמח להכיר</span>
+    <h1>יצירת קשר</h1>
+    <p>הנכם מוזמנים לפנות אלינו בכל שאלה — לתיאום פגישת היכרות, סיור בדירות או בדיקת התאמה למערך</p>
+    <div class="crumbs"><a href="index.html">בית</a> · יצירת קשר</div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" style="position:relative;z-index:2"><path d="M0,40 C320,80 720,0 1440,45 L1440,70 L0,70 Z" fill="#fbf7f1"/></svg>
+</div>
+
+<section>
+  <div class="container" style="display:grid;grid-template-columns:.85fr 1.15fr;gap:54px;align-items:start" id="cwrap">
+    <div class="reveal">
+      <span class="kicker teal">פרטי התקשרות</span>
+      <h2 style="font-size:clamp(24px,3vw,34px);margin:10px 0 14px">אנחנו כאן בשבילכם</h2>
+      <p style="color:var(--ink-soft);margin-bottom:30px">פנו אלינו בדרכים הבאות, או השאירו פרטים בטופס ואנו נחזור אליכם בהקדם.</p>
+      <div class="c-rows">
+        <div class="c-row"><span class="ic">📞</span><span><b>טלפון</b><span>052-4538070</span></span></div>
+        <div class="c-row"><span class="ic">✉️</span><span><b>דוא"ל</b><span>diur.modiin@nitzancenter.org</span></span></div>
+        <div class="c-row"><span class="ic">📍</span><span><b>כתובת</b><span class="he">רא"ל יגאל ידין 43, מודיעין מכבים רעות, ישראל</span></span></div>
+      </div>
+      <div class="social" style="margin-top:24px">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="פייסבוק" style="background:var(--teal);color:#fff">f</a>
+      </div>
+    </div>
+    <form class="cform reveal" onsubmit="alert('תודה! פנייתכם נשלחה ונחזור אליכם בהקדם.'); return false">
+      <h3>טופס יצירת קשר</h3>
+      <p class="sub">השאירו פרטים ואנו נחזור אליכם בהקדם</p>
+      <div class="frow">
+        <input type="text" placeholder="שם מלא *" required>
+        <input type="tel" placeholder="טלפון *" required>
+      </div>
+      <div class="frow">
+        <input type="email" placeholder="דוא&quot;ל">
+        <select><option>אני פונה בתור…</option><option>הורה / בן או בת משפחה</option><option>מועמד/ת לדיור</option><option>גורם מקצועי</option><option>אחר</option></select>
+      </div>
+      <textarea placeholder="איך נוכל לעזור?"></textarea>
+      <button class="btn btn-coral" type="submit">שליחה</button>
+    </form>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container reveal">
+    <div style="border-radius:26px;overflow:hidden;box-shadow:var(--shadow);height:380px">
+      <iframe title="מפה — רחוב יגאל ידין 43, מודיעין" src="https://maps.google.com/maps?q=%D7%99%D7%92%D7%90%D7%9C%20%D7%99%D7%93%D7%99%D7%9F%2043%20%D7%9E%D7%95%D7%93%D7%99%D7%A2%D7%99%D7%9F&t=&z=15&ie=UTF8&iwloc=&output=embed" style="width:100%;height:100%;border:0" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<style>
+@media (max-width:980px){#cwrap{grid-template-columns:1fr !important}}
+</style>
+
+<div id="site-footer"></div>
+<script src="js/site.js"></script>
+</body>
+</html>

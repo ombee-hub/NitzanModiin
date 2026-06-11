@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ניצן מודיעין — בית וקהילה שיקומית לבוגרים צעירים</title>
+<meta name="description" content="מערך דיור ניצן מודיעין — בית וקהילה שיקומית עבור בוגרים צעירים עם ליקויי למידה, קשיי הסתגלות ותפקוד. הצלחה בשילוב בעבודה בשוק החופשי.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="images/logo-nitzan.png">
+<style>
+.hero{position:relative;background:linear-gradient(118deg,var(--teal-dark) 0%,var(--teal) 58%,#1d77c9 100%);color:#fff;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(720px 420px at 12% 110%,rgba(156,196,238,.20),transparent 60%)}
+.hero .container{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:74px 0 104px}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:7px 18px;border-radius:999px;font-size:14.5px;font-weight:500;margin-bottom:22px}
+.hero .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--amber)}
+.hero h1{color:#fff;font-size:clamp(32px,4.2vw,52px);font-weight:800;margin-bottom:20px}
+.hero h1 .hl{color:#9cc4ee}
+.hero p.lead{font-size:19px;color:rgba(255,255,255,.88);max-width:34em;margin-bottom:34px;font-weight:300}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-card{position:relative}
+.hero-card .carousel{border-radius:28px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.35);aspect-ratio:4/3;background:#093a6e;position:relative}
+.carousel .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.1s ease}
+.carousel .slide.on{opacity:1}
+.carousel .slide img{width:100%;height:100%;object-fit:cover}
+.float-badge{position:absolute;background:#fff;color:var(--ink);border-radius:18px;box-shadow:var(--shadow);padding:14px 20px;display:flex;align-items:center;gap:12px;font-weight:600;font-size:15px;z-index:3}
+.float-badge .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:21px}
+.fb1{bottom:-24px;right:-14px}.fb1 .ic{background:var(--coral-soft)}
+.fb2{top:-20px;left:-10px}.fb2 .ic{background:var(--teal-light)}
+.float-badge small{display:block;font-weight:400;color:var(--ink-soft);font-size:13px}
+.stats{margin-top:-56px;position:relative;z-index:5}
+.stats .grid{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden}
+.stat{padding:28px 18px;text-align:center;border-inline-start:1px solid #edf2f8}
+.stat:first-child{border:none}
+.stat .num{font-family:'Assistant';font-weight:800;font-size:34px;color:var(--teal)}
+.stat .lbl{color:var(--ink-soft);font-size:15px;margin-top:2px}
+@media (max-width:980px){
+  .hero .container{grid-template-columns:1fr;padding:56px 0 92px}
+  .hero-card{max-width:560px}
+  .stats .grid{grid-template-columns:repeat(2,1fr)}
+  .stat{border:none;border-top:1px solid #edf2f8}
+}
+@media (max-width:560px){.stats .grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-page="home">
+
+<div id="site-header"></div>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="container">
+    <div>
+      <span class="eyebrow"><span class="dot"></span> מערך דיור ניצן מודיעין מבית אגודת ניצן ישראל</span>
+      <h1>בית וקהילה שיקומית <span class="hl">לבוגרות ולבוגרים צעירים</span></h1>
+      <p class="lead">עבור בוגרות ובוגרים צעירים עם ליקויי למידה, קשיי הסתגלות ותפקוד. אנו מלווים כל דיירת ודייר בדרך לעצמאות, להצלחה בשילוב בעבודה בשוק החופשי ולחיי חברה וקהילה מלאים.</p>
+      <div class="cta">
+        <a href="contact.html" class="btn btn-coral">קביעת פגישת היכרות</a>
+        <a href="#what" class="btn btn-ghost">מה אנו עושים ↓</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="carousel">
+        <div class="slide on"><img src="images/hero-livingroom.jpg" alt="יושבים בסלון בדירה של ניצן מודיעין"></div>
+        <div class="slide"><img src="images/hero-dinner-table.jpg" alt="יושבים ליד השולחן"></div>
+        <div class="slide"><img src="images/hero-music.jpg" alt="מייצרים מוזיקה יחד"></div>
+        <div class="slide"><img src="images/hero-together.jpg" alt="יושבים ומבלים בדירה"></div>
+      </div>
+      <div class="float-badge fb1"><span class="ic">🏠</span><span>דירות שיקומיות<small>בלב הקהילה במודיעין</small></span></div>
+      <div class="float-badge fb2"><span class="ic">💼</span><span>שילוב בתעסוקה<small>בשוק החופשי</small></span></div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" style="position:relative;z-index:2"><path d="M0,40 C320,80 720,0 1440,45 L1440,70 L0,70 Z" fill="#fbf7f1"/></svg>
+</div>
+
+<!-- Stats -->
+<div class="stats">
+  <div class="container">
+    <div class="grid">
+      <div class="stat"><div class="num">2012</div><div class="lbl">שנת הקמת המערך</div></div>
+      <div class="stat"><div class="num">20–35</div><div class="lbl">גילאי הדיירים במערך</div></div>
+      <div class="stat"><div class="num">80%</div><div class="lbl">מהדיירים העובדים משתכרים שכר מינימום ומעלה</div></div>
+      <div class="stat"><div class="num">1964</div><div class="lbl">שנת ייסוד אגודת ניצן</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- מה אנו עושים -->
+<section id="what">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker">מה אנו עושים</span>
+      <h2>ארבעה עוגנים לדרך עצמאית</h2>
+      <p>ליווי מקצועי, חם ואישי בכל תחומי החיים — מהבית, דרך העבודה ועד שעות הפנאי</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="ic c1"><img src="images/icon-rehab.png" alt=""></div>
+        <h3>התהליך השיקומי</h3>
+        <p>ליווי ותמיכה בדייר לאורך כל השלבים השיקומיים, תוך בניית תכנית פרטנית שתביא לידי ביטוי את מירב הפוטנציאל שלו: כישוריו, יכולותיו ורצונותיו ותספק מענה מדויק לצרכיו.</p>
+        <a class="btn btn-teal" href="shikum.html">קרא/י עוד</a>
+      </div>
+      <div class="card reveal">
+        <div class="ic c2"><img src="images/icon-employment.png" alt=""></div>
+        <h3>תעסוקה</h3>
+        <p>איתור ושילוב הדיירים במקומות עבודה מותאמים בשוק החופשי, בהתאם לרצונותיהם ולכישוריהם, בליווי של יועצת השמה בהתאם לצורך.</p>
+        <a class="btn btn-teal" href="work.html">קרא/י עוד</a>
+      </div>
+      <div class="card reveal">
+        <div class="ic c3"><img src="images/icon-parents.png" alt=""></div>
+        <h3>עבודה עם הורים</h3>
+        <p>צוות המערך דוגל בשיתוף ההורים בעבודה השיקומית עם הדיירים ובגיוסם לתמיכה בתהליך השיקומי, מתוך אמונה בחשיבות חלקם של ההורים בהתקדמות ילדיהם.</p>
+        <a class="btn btn-teal" href="parents.html">קרא/י עוד</a>
+      </div>
+      <div class="card reveal">
+        <div class="ic c4"><img src="images/icon-leisure.png" alt=""></div>
+        <h3>פנאי וחברה</h3>
+        <p>צוות המערך מקדיש זמן ומחשבה לפיתוח פעילויות פנאי עבור הדיירים בשיתוף עם ועד הדיירים: סדנאות, חוגים, טיולים, אירועים ומסיבות.</p>
+        <a class="btn btn-teal" href="clubs.html">קרא/י עוד</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- החזון שלנו -->
+<section class="dark-sec" style="padding:84px 0">
+  <div class="container split">
+    <div class="reveal">
+      <span class="kicker">החזון שלנו</span>
+      <h2 style="color:#fff;font-size:clamp(26px,3vw,38px);margin-bottom:18px">בית שמצמיח עצמאות</h2>
+      <p style="color:rgba(255,255,255,.82);margin-bottom:16px">מערך הדיור הוקם במטרה לשמש בית וקהילה שיקומית עבור בוגרים צעירים עם ליקויי למידה, קשיי הסתגלות ותפקוד. המערך מושתת על הבנת החשיבות בקידום איכות חיים גבוהה המאפשרת מוטיבציה לגדילה והתפתחות.</p>
+      <p style="color:rgba(255,255,255,.82);margin-bottom:28px">מושם דגש על מינוף יכולותיהם של הדיירים ועידודם לעצמאות, לשליטה מרבית בחייהם, לקבלת החלטות מתוך חופש בחירה, לפיתוח היכולת לסנגור עצמי ולהגשמת שאיפותיהם תוך היענות לצרכים המשתנים לאורך מעגל החיים.</p>
+      <a href="about.html" class="btn btn-coral">קרא/י עוד עלינו</a>
+    </div>
+    <div class="reveal">
+      <div class="hl-box" style="background:rgba(255,255,255,.07);border-color:var(--amber);backdrop-filter:blur(4px)">
+        <h3 style="color:#9cc4ee">אוכלוסיית היעד</h3>
+        <p style="color:rgba(255,255,255,.85)">בוגרים בגילאי 20–35 שאובחנו עם ליקויי למידה, קשיי הסתגלות ותפקוד ובוגרים על הרצף האוטיסטי בתפקוד גבוה, אשר אושרו על ידי וועדת השמה בלשכות לשירותים חברתיים ובמשרד הרווחה כזכאים לדיור חוץ-ביתי.</p>
+        <a href="contact.html" class="btn btn-ghost" style="margin-top:20px">בדיקת התאמה</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- סיפורי הצלחה -->
+<section>
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker">סיפורי הצלחה</span>
+      <h2>הדיירים והדיירות שלנו מספרים</h2>
+      <p>משרתים, עובדים, לומדים ויוצרים — הסיפורים שעושים לנו את היום</p>
+    </div>
+    <div class="st-slider reveal" id="storySlider">
+      <div class="st-stage">
+        <div class="st-slide on">
+          <div class="story-card">
+            <div class="photo"><img src="images/doron.jpg" alt="דורון גרינברג" style="object-position:top"></div>
+            <div class="body">
+              <div class="quote-mark">”</div>
+              <blockquote>שירת בצבא בהתנדבות במשך 3 שנים בחיל השלישות וזכה לתעודת הצטיינות והערכה. עובד בחברת החשמל מזה 5 שנים במשרה מלאה, מגיע בזמן ובקביעות ומביע מוטיבציה להצליח ולהתקדם.</blockquote>
+              <div class="who">
+                <span><b>דורון גרינברג</b><span>חייל מצטיין · עובד חברת החשמל</span></span>
+              </div>
+              <div style="margin-top:24px"><a href="doron.html" class="btn btn-teal">לסיפור המלא של דורון</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="st-slide">
+          <div class="story-card">
+            <div class="photo"><img src="images/yoel.jpg" alt="יואל נויבורגר עם שיר שכתב"></div>
+            <div class="body">
+              <div class="quote-mark">”</div>
+              <blockquote>כותב שירים והשתתף בתערוכה של אומנים עם צרכים מיוחדים שהוצגה בבית המשפט העליון. במסגרת עבודתו במוזיאון ישראל נבחר להקריא שיר שכתב בנושא צבעים במלאת 30 יום לפטירתה של נחמה ריבלין ז"ל.</blockquote>
+              <div class="who">
+                <span><b>יואל נויבורגר</b><span>משורר · עובד מוזיאון ישראל</span></span>
+              </div>
+              <div style="margin-top:24px"><a href="yoel.html" class="btn btn-teal">לסיפור המלא של יואל</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="st-slide">
+          <div class="story-card">
+            <div class="photo"><img src="images/maayan.jpg" alt="מעיין חיון"></div>
+            <div class="body">
+              <div class="quote-mark">”</div>
+              <blockquote>על המצוינות שגילתה בשירות הלאומי קיבלה תעודת הוקרה מנחמה ריבלין ז"ל. עובדת כ-3.5 שנים כסייעת לגננת ולומדת תואר ראשון בחינוך בלתי פורמלי בפרויקט "להיות סטודנט".</blockquote>
+              <div class="who">
+                <span><b>מעיין חיון</b><span>סייעת לגננת · סטודנטית לתואר ראשון</span></span>
+              </div>
+              <div style="margin-top:24px"><a href="maayan.html" class="btn btn-teal">לסיפור המלא של מעיין</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="st-nav prev" aria-label="הסיפור הקודם">‹</button>
+      <button class="st-nav next" aria-label="הסיפור הבא">›</button>
+    </div>
+    <div style="text-align:center;margin-top:22px" class="reveal">
+      <a href="successes.html" class="btn btn-teal">לכל סיפורי ההצלחה</a>
+    </div>
+  </div>
+</section>
+
+<!-- באנר -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <div>
+        <h2>רוצים להכיר את המערך מקרוב?</h2>
+        <p>נשמח להזמין אתכם לפגישת היכרות וסיור בדירות, ולבדוק יחד התאמה למערך. צרו קשר ונחזור אליכם בהקדם.</p>
+      </div>
+      <div class="side"><a href="contact.html" class="btn btn-light">יצירת קשר <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform:rotate(-135deg);flex:none" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a></div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="js/site.js"></script>
+<script>
+/* קרוסלת סיפורי הצלחה */
+(function () {
+  var slider = document.getElementById('storySlider');
+  if (!slider) return;
+  var slides = slider.querySelectorAll('.st-slide');
+  var cur = 0, timer = null;
+
+  function go(i) {
+    slides[cur].classList.remove('on');
+    cur = (i + slides.length) % slides.length;
+    slides[cur].classList.add('on');
+  }
+  function restart() { clearInterval(timer); timer = setInterval(function () { go(cur + 1); }, 6000); }
+
+  slider.querySelector('.st-nav.next').addEventListener('click', function () { go(cur + 1); restart(); });
+  slider.querySelector('.st-nav.prev').addEventListener('click', function () { go(cur - 1); restart(); });
+  slider.addEventListener('mouseenter', function () { clearInterval(timer); });
+  slider.addEventListener('mouseleave', restart);
+  restart();
+})();
+</script>
+</body>
+</html>
