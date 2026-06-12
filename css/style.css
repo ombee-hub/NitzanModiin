@@ -159,6 +159,7 @@ section{padding:78px 0}
 .s-card .more{display:inline-block;margin-top:16px;color:var(--teal);font-weight:700;font-size:15px}
 .s-card .more::after{content:"←";margin-inline-start:6px;transition:.2s;display:inline-block}
 .s-card:hover .more::after{transform:translateX(-4px)}
+.s-card .btn{margin-top:20px;width:100%;justify-content:center}
 
 /* בלוק ציטוט / סיפור */
 .story-card{display:grid;grid-template-columns:.9fr 1.1fr;background:linear-gradient(135deg,var(--teal-light),#fff 70%);border-radius:30px;overflow:hidden;box-shadow:var(--shadow)}
