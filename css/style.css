@@ -79,9 +79,6 @@ nav.main .drawer-head{display:none}
 .page-hero .kicker{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.22)}
 .page-hero h1{color:#fff;font-size:clamp(30px,4vw,46px);font-weight:800;margin-bottom:14px}
 .page-hero p{font-size:18.5px;color:rgba(255,255,255,.88);font-weight:300;max-width:38em;margin-inline:auto}
-.page-hero .crumbs{margin-top:22px;font-size:14px;color:rgba(255,255,255,.65)}
-.page-hero .crumbs a{color:rgba(255,255,255,.85);font-weight:500}
-.page-hero .crumbs a:hover{color:#fff}
 .wave{display:block;width:100%;margin-top:-1px}
 
 /* ---------- מקטעים ---------- */
@@ -219,8 +216,7 @@ form.cform.on-cream input,form.cform.on-cream textarea,form.cform.on-cream selec
 .c-row{display:flex;gap:16px;align-items:center;background:#fff;border-radius:18px;padding:18px 20px;box-shadow:var(--shadow-sm)}
 .c-row .ic{flex:none;width:48px;height:48px;border-radius:14px;background:var(--teal-light);display:grid;place-items:center;font-size:22px}
 .c-row b{display:block;font-size:15px;color:var(--teal-dark)}
-.c-row span{color:var(--ink-soft);font-size:15.5px;direction:ltr;unicode-bidi:embed}
-.c-row span.he{direction:rtl}
+.c-row span{color:var(--ink-soft);font-size:15.5px;text-align:right}
 
 /* ---------- פוטר ---------- */
 footer.site{background:var(--teal-dark);color:#bdd2e8;padding:64px 0 0;font-size:15px}
