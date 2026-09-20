@@ -6,7 +6,7 @@
     {
       id: 'about', label: 'אודות', href: 'about.html', sub: [
         { label: 'מי אנחנו', href: 'about.html' },
-        { label: 'מטרות', href: 'about.html#goals' },
+        { label: 'מטרות', href: 'goals.html' },
         { label: 'צוות המערך', href: 'staff.html' }
       ]
     },
@@ -43,7 +43,7 @@
       }
       h += '</li>';
     });
-    h += '<li class="nav-cta-li"><a class="nav-cta" href="contact.html">יצירת קשר <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform:rotate(-135deg);flex:none" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a></li>';
+    h += '<li class="nav-cta-li"><a class="nav-cta" href="contact.html">יצירת קשר <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform:rotate(-90deg);flex:none" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a></li>';
     return h + '</ul>';
   }
 
@@ -51,7 +51,7 @@
     '<header class="site" id="siteHeader"><div class="topstrip"></div><div class="container nav">' +
     '<a class="logo" href="index.html"><img src="images/logo-nitzan.png" alt="ניצן מודיעין"></a>' +
     '<nav class="main" aria-label="ניווט ראשי">' + navHtml() + '</nav>' +
-    '<a href="contact.html" class="btn btn-coral cta-btn">יצירת קשר <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform:rotate(-135deg);flex:none" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>' +
+    '<a href="contact.html" class="btn btn-coral cta-btn">יצירת קשר <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform:rotate(-90deg);flex:none" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>' +
     '<button class="hamburger" aria-label="פתיחת תפריט" id="hamBtn">☰</button>' +
     '</div></header>' +
     '<div class="nav-backdrop" id="navBackdrop"></div>';
@@ -61,13 +61,13 @@
     '<div class="f-grid">' +
     '<div><a class="f-logo" href="index.html" aria-label="חזרה לדף הבית"><img src="images/logo-nitzan.png" alt="לוגו ניצן מודיעין"></a>' +
     '<p>מערך דיור וקהילה שיקומית עבור בוגרים צעירים עם ליקויי למידה, קשיי הסתגלות ותפקוד. בית אמיתי בלב מודיעין, מבית אגודת ניצן.</p>' +
-    '<div class="social"><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="פייסבוק">f</a></div></div>' +
+    '<div class="social"><a href="https://www.facebook.com/profile.php?id=100077729597645" target="_blank" rel="noopener" aria-label="פייסבוק">f</a></div></div>' +
     '<div class="f-sitemap">' +
     '<h4 class="map-title">מפת האתר</h4>' +
     '<div class="f-links">' +
     '<div><h4>אודות</h4><ul>' +
     '<li><a href="about.html">מי אנחנו</a></li>' +
-    '<li><a href="about.html#goals">מטרות המערך</a></li>' +
+    '<li><a href="goals.html">מטרות המערך</a></li>' +
     '<li><a href="staff.html">צוות המערך</a></li>' +
     '<li><a href="successes.html">סיפורי הצלחה</a></li></ul></div>' +
     '<div><h4>החיים במערך</h4><ul>' +
@@ -77,9 +77,9 @@
     '<li><a href="workshops.html">סדנאות</a></li>' +
     '<li><a href="trips.html">טיולים</a></li></ul></div>' +
     '<div><h4>יצירת קשר</h4><ul>' +
-    '<li>📞 052-4538070</li>' +
-    '<li>✉️ diur.modiin@nitzancenter.org</li>' +
-    '<li>📍 רחוב יגאל ידין 43/7, מודיעין</li>' +
+    '<li>📞 <a href="tel:097601879">09-7601879</a></li>' +
+    '<li>✉️ <a href="mailto:diur.modiin@nitzancenter.org">diur.modiin@nitzancenter.org</a></li>' +
+    '<li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-inline-end:7px" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>רחוב יגאל ידין 43/7, מודיעין</li>' +
     '<li><a href="accessibility.html">הצהרת נגישות</a></li>' +
     '<li><a href="privacy.html">מדיניות פרטיות</a></li></ul></div>' +
     '</div></div>' +
@@ -93,9 +93,9 @@
     a11yPanelHtml() +
     '<div class="cookie-pop" id="cookiePop" hidden role="dialog" aria-label="הודעת שימוש בעוגיות">' +
     '<span class="cookie-ic" aria-hidden="true">🍪</span>' +
-    '<p>אתר זה משתמש בעוגיות (Cookies) כדי לשפר את חוויית הגלישה שלכם. המשך הגלישה באתר מהווה הסכמה לשימוש בעוגיות.</p>' +
-    '<div class="cookie-actions"><button class="btn btn-teal" id="cookieOk">אישור והמשך</button>' +
-    '<a href="privacy.html" class="cookie-link">למדיניות הפרטיות</a></div>' +
+    '<p>אתר זה משתמש בעוגיות (Cookies) כדי לשפר את חוויית הגלישה שלכם. <a href="privacy.html" class="cookie-link">למדיניות הפרטיות</a></p>' +
+    '<div class="cookie-actions"><button class="btn btn-teal" id="cookieOk">קבל/י</button>' +
+    '<button class="cookie-decline" id="cookieNo">דחייה</button></div>' +
     '</div>';
 
   function a11yTile(f, icon, label) {
@@ -233,17 +233,19 @@
     a11yApply();
   }
 
-  /* ===== פופאפ עוגיות ===== */
+  /* ===== באנר עוגיות — מוצג בכל כניסה לדף הבית בלבד ===== */
   var cookiePop = document.getElementById('cookiePop');
-  if (cookiePop) {
-    var consented = false;
-    try { consented = localStorage.getItem('nitzan-cookies') === 'yes'; } catch (e) {}
-    if (!consented) {
-      setTimeout(function () { cookiePop.hidden = false; }, 800);
-      document.getElementById('cookieOk').addEventListener('click', function () {
-        try { localStorage.setItem('nitzan-cookies', 'yes'); } catch (e) {}
-        cookiePop.hidden = true;
-      });
+  if (cookiePop && active === 'home') {
+    /* כפתור הנגישות והפאנל נדחפים אל מעל הבאנר כשהוא פתוח */
+    function liftA11y() {
+      var h = cookiePop.hidden ? 0 : cookiePop.offsetHeight;
+      if (a11yBtn) a11yBtn.style.bottom = h ? (h + 14) + 'px' : '';
+      if (a11yPanel) a11yPanel.style.bottom = h ? (h + 80) + 'px' : '';
     }
+    function closeCookies() { cookiePop.hidden = true; liftA11y(); }
+    setTimeout(function () { cookiePop.hidden = false; liftA11y(); }, 800);
+    document.getElementById('cookieOk').addEventListener('click', closeCookies);
+    document.getElementById('cookieNo').addEventListener('click', closeCookies);
+    window.addEventListener('resize', liftA11y);
   }
 })();

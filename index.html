@@ -14,8 +14,8 @@
 .hero{position:relative;background:linear-gradient(118deg,var(--teal-dark) 0%,var(--teal) 58%,#1d77c9 100%);color:#fff;overflow:hidden}
 .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(720px 420px at 12% 110%,rgba(156,196,238,.20),transparent 60%)}
 .hero .container{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:74px 0 104px}
-.hero .eyebrow{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:7px 18px;border-radius:999px;font-size:14.5px;font-weight:500;margin-bottom:22px}
-.hero .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--amber)}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:7px 18px;border-radius:12px;font-size:14.5px;font-weight:500;margin-bottom:22px}
+.hero .eyebrow .dot{width:8px;height:8px;border-radius:2px;background:var(--amber)}
 .hero h1{color:#fff;font-size:clamp(32px,4.2vw,52px);font-weight:800;margin-bottom:20px}
 .hero h1 .hl{color:#9cc4ee}
 .hero p.lead{font-size:19px;color:rgba(255,255,255,.88);max-width:34em;margin-bottom:34px;font-weight:300}
@@ -26,9 +26,9 @@
 .carousel .slide.on{opacity:1}
 .carousel .slide img{width:100%;height:100%;object-fit:cover}
 .float-badge{position:absolute;background:#fff;color:var(--ink);border-radius:18px;box-shadow:var(--shadow);padding:14px 20px;display:flex;align-items:center;gap:12px;font-weight:600;font-size:15px;z-index:3}
-.float-badge .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:21px}
-.fb1{bottom:-24px;right:-14px}.fb1 .ic{background:var(--coral-soft)}
-.fb2{top:-20px;left:-10px}.fb2 .ic{background:var(--teal-light)}
+.float-badge .ic{display:grid;place-items:center;font-size:24px}
+.fb1{bottom:-24px;right:-14px}
+.fb2{top:-20px;left:-10px}
 .float-badge small{display:block;font-weight:400;color:var(--ink-soft);font-size:13px}
 .stats{margin-top:-56px;position:relative;z-index:5}
 .stats .grid{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden}
@@ -211,7 +211,7 @@
         <h2>רוצים להכיר את המערך מקרוב?</h2>
         <p>נשמח להזמין אתכם לפגישת היכרות וסיור בדירות, ולבדוק יחד התאמה למערך. צרו קשר ונחזור אליכם בהקדם.</p>
       </div>
-      <div class="side"><a href="contact.html" class="btn btn-light">יצירת קשר <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform:rotate(-135deg);flex:none" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a></div>
+      <div class="side"><a href="contact.html" class="btn btn-light">יצירת קשר <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform:rotate(-90deg);flex:none" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a></div>
     </div>
   </div>
 </section>

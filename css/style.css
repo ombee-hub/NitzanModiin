@@ -84,7 +84,7 @@ nav.main .drawer-head{display:none}
 /* ---------- מקטעים ---------- */
 section{padding:78px 0}
 .sec-head{text-align:center;max-width:46em;margin:0 auto 50px}
-.kicker{display:inline-block;background:var(--coral-soft);color:var(--coral-dark);font-weight:700;font-size:14px;padding:6px 18px;border-radius:999px;margin-bottom:14px;letter-spacing:.3px}
+.kicker{display:inline-block;background:var(--coral-soft);color:var(--coral-dark);font-weight:700;font-size:14px;padding:6px 18px;border-radius:10px;margin-bottom:14px;letter-spacing:.3px}
 .kicker.teal{background:var(--teal-light);color:var(--teal)}
 .sec-head h2{font-size:clamp(26px,3.2vw,38px);font-weight:800;margin-bottom:14px}
 .sec-head p{color:var(--ink-soft);font-size:17.5px}
@@ -96,7 +96,7 @@ section{padding:78px 0}
 .prose h3{font-size:22px;margin:30px 0 12px}
 .prose ul{margin:0 0 18px;padding-inline-start:0;list-style:none;display:grid;gap:10px}
 .prose ul li{display:flex;gap:12px;align-items:flex-start;color:#3a4a53}
-.prose ul li::before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;background:var(--teal-light);color:var(--teal);display:grid;place-items:center;font-size:13px;font-weight:800;margin-top:4px}
+.prose ul li::before{content:"✓";flex:none;width:24px;height:24px;border-radius:7px;background:var(--teal-light);color:var(--teal);display:grid;place-items:center;font-size:13px;font-weight:800;margin-top:4px}
 
 /* פריסת טקסט+תמונה */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
@@ -113,14 +113,11 @@ section{padding:78px 0}
 .card>p{flex:1}
 .card .btn{margin-top:20px;width:100%;justify-content:center}
 .card:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:var(--teal-light)}
-.card .ic{width:62px;height:62px;border-radius:18px;display:grid;place-items:center;font-size:28px;margin-bottom:20px}
-.card .ic img{width:38px;height:38px;object-fit:contain}
-.ic.c1{background:var(--teal-light)}.ic.c2{background:var(--coral-soft)}.ic.c3{background:var(--amber-soft)}.ic.c4{background:var(--lav-soft)}
+.card .ic{display:flex;align-items:center;font-size:34px;line-height:1;margin-bottom:18px}
+.card .ic img{width:44px;height:44px;object-fit:contain}
 .card h3{font-size:20px;margin-bottom:10px}
 .card p{color:var(--ink-soft);font-size:15.5px}
 .card .more{display:inline-block;margin-top:16px;color:var(--teal);font-weight:700;font-size:15px}
-.card .more::after{content:"←";margin-inline-start:6px;transition:.2s;display:inline-block}
-.card:hover .more::after{transform:translateX(-4px)}
 
 /* גלריה */
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -152,10 +149,8 @@ section{padding:78px 0}
 .s-card .body{padding:28px 26px;flex:1;display:flex;flex-direction:column}
 .s-card h3{font-size:21px;margin-bottom:10px}
 .s-card p{color:var(--ink-soft);font-size:15.5px;flex:1}
-.s-card .tag{display:inline-block;background:var(--teal-light);color:var(--teal);font-weight:700;font-size:13px;padding:4px 14px;border-radius:999px;margin-bottom:12px;align-self:flex-start}
+.s-card .tag{display:inline-block;background:var(--teal-light);color:var(--teal);font-weight:700;font-size:13px;padding:4px 14px;border-radius:8px;margin-bottom:12px;align-self:flex-start}
 .s-card .more{display:inline-block;margin-top:16px;color:var(--teal);font-weight:700;font-size:15px}
-.s-card .more::after{content:"←";margin-inline-start:6px;transition:.2s;display:inline-block}
-.s-card:hover .more::after{transform:translateX(-4px)}
 .s-card .btn{margin-top:20px;width:100%;justify-content:center}
 
 /* בלוק ציטוט / סיפור */
@@ -166,7 +161,7 @@ section{padding:78px 0}
 .quote-mark{font-family:'Assistant';font-size:72px;color:var(--coral);line-height:.6;margin-bottom:18px}
 .story-card blockquote{font-size:20px;font-weight:500;color:var(--teal-dark);margin-bottom:22px;line-height:1.6}
 .story-card .who{display:flex;align-items:center;gap:14px}
-.story-card .who .av{width:52px;height:52px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:700;font-family:'Assistant';font-size:19px;overflow:hidden}
+.story-card .who .av{width:52px;height:52px;border-radius:14px;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:700;font-family:'Assistant';font-size:19px;overflow:hidden}
 .story-card .who .av img{width:100%;height:100%;object-fit:cover}
 .story-card .who b{display:block;color:var(--teal-dark)}
 .story-card .who span{color:var(--ink-soft);font-size:14.5px}
@@ -214,7 +209,7 @@ form.cform.on-cream input,form.cform.on-cream textarea,form.cform.on-cream selec
 /* שורות יצירת קשר */
 .c-rows{display:grid;gap:16px}
 .c-row{display:flex;gap:16px;align-items:center;background:#fff;border-radius:18px;padding:18px 20px;box-shadow:var(--shadow-sm)}
-.c-row .ic{flex:none;width:48px;height:48px;border-radius:14px;background:var(--teal-light);display:grid;place-items:center;font-size:22px}
+.c-row .ic{flex:none;width:26px;display:grid;place-items:center;font-size:22px}
 .c-row b{display:block;font-size:15px;color:var(--teal-dark)}
 .c-row span{color:var(--ink-soft);font-size:15.5px;text-align:right}
 
@@ -241,7 +236,7 @@ a.f-logo:hover img{opacity:.8;transform:scale(1.04)}
 .social a:hover{background:#1d77c9}
 
 /* כפתור נגישות */
-.a11y{position:fixed;bottom:26px;inset-inline-start:26px;z-index:60;width:54px;height:54px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;box-shadow:0 10px 28px rgba(6,47,92,.4);cursor:pointer;border:none;transition:.2s}
+.a11y{position:fixed;bottom:26px;inset-inline-start:26px;z-index:60;width:54px;height:54px;border-radius:16px;background:var(--teal);color:#fff;display:grid;place-items:center;box-shadow:0 10px 28px rgba(6,47,92,.4);cursor:pointer;border:none;transition:.2s}
 .a11y:hover{transform:scale(1.07)}
 .a11y svg{width:30px;height:30px}
 
@@ -277,14 +272,23 @@ html.a11y-gray.a11y-contrast{filter:grayscale(1) invert(1) hue-rotate(180deg)}
 html.a11y-justify p{text-align:justify!important}
 .a11y-alt-label{display:block;background:var(--teal-dark);color:#fff;font-size:13px;padding:5px 12px;border-radius:0 0 10px 10px}
 
-/* פופאפ עוגיות */
-.cookie-pop{position:fixed;bottom:24px;inset-inline-end:24px;z-index:75;width:min(350px,calc(100vw - 40px));background:#fff;border-radius:18px;box-shadow:0 18px 50px rgba(6,47,92,.32);padding:34px 22px 20px;text-align:center;animation:cookieIn .45s ease}
-@keyframes cookieIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-.cookie-pop .cookie-ic{position:absolute;top:-31px;inset-inline-start:50%;transform:translateX(50%);width:62px;height:62px;border-radius:50%;background:var(--teal-light);border:4px solid #fff;box-shadow:var(--shadow-sm);display:grid;place-items:center;font-size:30px}
-.cookie-pop p{font-size:14.5px;color:var(--ink-soft);line-height:1.6;margin-bottom:16px}
-.cookie-actions{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap}
-.cookie-actions .btn{padding:10px 22px;font-size:15px}
-.cookie-link{font-size:13.5px;color:var(--teal);text-decoration:underline;font-weight:600}
+/* באנר עוגיות */
+.cookie-pop{position:fixed;bottom:0;inset-inline:0;z-index:75;background:#fff;box-shadow:0 -12px 40px rgba(6,47,92,.18);padding:16px 4%;display:flex;align-items:center;justify-content:center;gap:18px;animation:cookieIn .45s ease}
+.cookie-pop[hidden]{display:none}
+@keyframes cookieIn{from{opacity:0;transform:translateY(100%)}to{opacity:1;transform:none}}
+.cookie-pop .cookie-ic{flex:none;font-size:28px;line-height:1}
+.cookie-pop p{flex:0 1 auto;font-size:14.5px;color:var(--ink-soft);line-height:1.6;margin:0}
+.cookie-actions{display:flex;gap:10px;align-items:center;flex:none;flex-wrap:wrap}
+.cookie-actions .btn{padding:10px 28px;font-size:15px}
+.cookie-decline{background:none;border:1.5px solid #cfd8e3;color:var(--ink-soft);border-radius:12px;padding:10px 24px;font-weight:700;font-size:15px;font-family:'Assistant';cursor:pointer;transition:.2s}
+.cookie-decline:hover{border-color:var(--teal);color:var(--teal)}
+.cookie-link{font-size:inherit;color:var(--teal);text-decoration:underline;font-weight:600}
+@media (max-width:640px){
+  .cookie-pop{flex-wrap:wrap;text-align:center;padding:16px 5%}
+  .cookie-pop .cookie-ic{display:none}
+  .cookie-pop p{flex:1 1 100%}
+  .cookie-actions{width:100%;justify-content:center}
+}
 
 /* אנימציית גילוי */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
