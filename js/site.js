@@ -86,13 +86,7 @@
     '</div>' +
     '<div class="f-bottom"><span>&copy; 2012-2026 כל הזכויות שמורות למערך דיור ניצן מודיעין</span>' +
     '<a class="credit" href="https://ombee.co.il" target="_blank" rel="noopener">עיצוב ובנייה ע"י: <img src="images/ombee-logo.png" alt="OMBee — Graphic Design And UI/UX"></a></div>' +
-    '</div></footer>' +
-    '<div class="cookie-pop" id="cookiePop" hidden role="dialog" aria-label="הודעת שימוש בעוגיות">' +
-    '<span class="cookie-ic" aria-hidden="true">🍪</span>' +
-    '<p>אתר זה משתמש בעוגיות (Cookies) כדי לשפר את חוויית הגלישה שלכם. <a href="privacy.html" class="cookie-link">למדיניות הפרטיות</a></p>' +
-    '<div class="cookie-actions"><button class="btn btn-teal" id="cookieOk">מאשר/ת</button>' +
-    '<button class="cookie-decline" id="cookieNo">ביטול</button></div>' +
-    '</div>';
+    '</div></footer>';
 
   var headerSlot = document.getElementById('site-header');
   var footerSlot = document.getElementById('site-footer');
@@ -143,19 +137,4 @@
     }, 4200);
   }
 
-  /* ===== באנר עוגיות — מוצג בכל כניסה לדף הבית בלבד ===== */
-  var cookiePop = document.getElementById('cookiePop');
-  if (cookiePop && active === 'home') {
-    /* כפתור הנגישות נדחף אל מעל הבאנר כשהוא פתוח */
-    function liftA11y() {
-      var h = cookiePop.hidden ? 0 : cookiePop.offsetHeight;
-      var a11yBtn = document.querySelector('.ombee-a11y-btn');
-      if (a11yBtn) a11yBtn.style.bottom = h ? (h + 30) + 'px' : '';
-    }
-    function closeCookies() { cookiePop.hidden = true; liftA11y(); }
-    setTimeout(function () { cookiePop.hidden = false; liftA11y(); }, 800);
-    document.getElementById('cookieOk').addEventListener('click', closeCookies);
-    document.getElementById('cookieNo').addEventListener('click', closeCookies);
-    window.addEventListener('resize', liftA11y);
-  }
 })();
