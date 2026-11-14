@@ -87,42 +87,12 @@
     '<div class="f-bottom"><span>&copy; 2012-2026 כל הזכויות שמורות למערך דיור ניצן מודיעין</span>' +
     '<a class="credit" href="https://ombee.co.il" target="_blank" rel="noopener">עיצוב ובנייה ע"י: <img src="images/ombee-logo.png" alt="OMBee — Graphic Design And UI/UX"></a></div>' +
     '</div></footer>' +
-    '<button class="a11y" id="a11yBtn" aria-label="פתיחת תפריט נגישות" aria-expanded="false" title="נגישות">' +
-    '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="3.6" r="2.1"/><path d="M21 7.2h-6.3V22h-2.1v-6.8h-1.2V22H9.3V7.2H3V5.4h18v1.8z"/></svg>' +
-    '</button>' +
-    a11yPanelHtml() +
     '<div class="cookie-pop" id="cookiePop" hidden role="dialog" aria-label="הודעת שימוש בעוגיות">' +
     '<span class="cookie-ic" aria-hidden="true">🍪</span>' +
     '<p>אתר זה משתמש בעוגיות (Cookies) כדי לשפר את חוויית הגלישה שלכם. <a href="privacy.html" class="cookie-link">למדיניות הפרטיות</a></p>' +
     '<div class="cookie-actions"><button class="btn btn-teal" id="cookieOk">קבל/י</button>' +
     '<button class="cookie-decline" id="cookieNo">דחייה</button></div>' +
     '</div>';
-
-  function a11yTile(f, icon, label) {
-    return '<button class="a11y-tile" data-f="' + f + '" aria-pressed="false"><span class="tic">' + icon + '</span><span>' + label + '</span></button>';
-  }
-
-  function a11yPanelHtml() {
-    return '<div class="a11y-panel" id="a11yPanel" hidden role="dialog" aria-label="תפריט נגישות">' +
-      '<div class="a11y-head"><b>תפריט נגישות</b><button class="a11y-close" id="a11yClose" aria-label="סגירת התפריט">✕</button></div>' +
-      '<div class="a11y-grid">' +
-      a11yTile('contrast', '◐', 'ניגודיות +') +
-      a11yTile('links', '🔗', 'הדגשת קישורים') +
-      a11yTile('bigtext', 'TT', 'טקסט גדול') +
-      a11yTile('spacing', '⟷', 'ריווח טקסט') +
-      a11yTile('noanim', '✋', 'ביטול הנפשות') +
-      a11yTile('noimg', '🖼', 'הסתרת תמונות') +
-      a11yTile('dyslexia', 'Df', 'גופן קריא') +
-      a11yTile('cursor', '↖', 'סמן גדול') +
-      a11yTile('lineheight', '↕', 'גובה שורה') +
-      a11yTile('desc', 'i', 'תיאורי תמונות') +
-      a11yTile('gray', '◑', 'גווני אפור') +
-      a11yTile('justify', '☰', 'יישור טקסט') +
-      '</div>' +
-      '<button class="a11y-reset" id="a11yReset">⟳ איפוס כל הגדרות הנגישות</button>' +
-      '<div class="a11y-foot"><a href="accessibility.html">הצהרת נגישות</a> · <a href="privacy.html">מדיניות פרטיות</a></div>' +
-      '</div>';
-  }
 
   var headerSlot = document.getElementById('site-header');
   var footerSlot = document.getElementById('site-footer');
@@ -173,74 +143,14 @@
     }, 4200);
   }
 
-  /* ===== תפריט נגישות ===== */
-  var A11Y_KEY = 'nitzan-a11y';
-  var a11yBtn = document.getElementById('a11yBtn');
-  var a11yPanel = document.getElementById('a11yPanel');
-
-  function a11yState() {
-    try { return JSON.parse(localStorage.getItem(A11Y_KEY)) || {}; } catch (e) { return {}; }
-  }
-  function a11ySave(s) { try { localStorage.setItem(A11Y_KEY, JSON.stringify(s)); } catch (e) {} }
-
-  function applyDesc(on) {
-    document.querySelectorAll('.a11y-alt-label').forEach(function (el) { el.remove(); });
-    if (!on) return;
-    document.querySelectorAll('img[alt]:not(.a11y-skip)').forEach(function (im) {
-      if (!im.alt.trim() || im.closest('.a11y-panel')) return;
-      var lb = document.createElement('span');
-      lb.className = 'a11y-alt-label';
-      lb.textContent = im.alt;
-      im.insertAdjacentElement('afterend', lb);
-    });
-  }
-
-  function a11yApply() {
-    var s = a11yState();
-    document.querySelectorAll('.a11y-tile').forEach(function (t) {
-      var f = t.getAttribute('data-f');
-      var on = !!s[f];
-      document.documentElement.classList.toggle('a11y-' + f, on);
-      t.classList.toggle('on', on);
-      t.setAttribute('aria-pressed', on ? 'true' : 'false');
-    });
-    applyDesc(!!s.desc);
-  }
-
-  if (a11yBtn && a11yPanel) {
-    a11yBtn.addEventListener('click', function () {
-      var open = a11yPanel.hidden;
-      a11yPanel.hidden = !open;
-      a11yBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    document.getElementById('a11yClose').addEventListener('click', function () {
-      a11yPanel.hidden = true;
-      a11yBtn.setAttribute('aria-expanded', 'false');
-    });
-    a11yPanel.querySelectorAll('.a11y-tile').forEach(function (t) {
-      t.addEventListener('click', function () {
-        var s = a11yState();
-        var f = t.getAttribute('data-f');
-        s[f] = !s[f];
-        a11ySave(s);
-        a11yApply();
-      });
-    });
-    document.getElementById('a11yReset').addEventListener('click', function () {
-      a11ySave({});
-      a11yApply();
-    });
-    a11yApply();
-  }
-
   /* ===== באנר עוגיות — מוצג בכל כניסה לדף הבית בלבד ===== */
   var cookiePop = document.getElementById('cookiePop');
   if (cookiePop && active === 'home') {
-    /* כפתור הנגישות והפאנל נדחפים אל מעל הבאנר כשהוא פתוח */
+    /* כפתור הנגישות נדחף אל מעל הבאנר כשהוא פתוח */
     function liftA11y() {
       var h = cookiePop.hidden ? 0 : cookiePop.offsetHeight;
+      var a11yBtn = document.querySelector('.ombee-a11y-btn');
       if (a11yBtn) a11yBtn.style.bottom = h ? (h + 14) + 'px' : '';
-      if (a11yPanel) a11yPanel.style.bottom = h ? (h + 80) + 'px' : '';
     }
     function closeCookies() { cookiePop.hidden = true; liftA11y(); }
     setTimeout(function () { cookiePop.hidden = false; liftA11y(); }, 800);
