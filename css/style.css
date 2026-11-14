@@ -288,7 +288,7 @@ a.f-logo:hover img{opacity:.8;transform:scale(1.04)}
 /* באנר עוגיות (הבאנר של סטודיו OMBee, גרסה ברוחב מלא) — js/cookies.js */
 .cookie-banner{padding:0!important;margin:0;position:fixed;z-index:90;left:0;right:0;bottom:0;background:var(--teal-dark);color:#fff;border-top:4px solid var(--amber);box-shadow:0 -18px 40px -20px rgba(0,0,0,.55);transform:translateY(100%);opacity:0;transition:transform .4s ease,opacity .4s}
 .cookie-banner.show{transform:none;opacity:1}
-.cookie-inner{display:flex;align-items:center;gap:20px;padding:18px 0}
+.cookie-inner{display:flex;align-items:center;gap:20px;padding:18px 0;padding-left:max(0px,calc(86px - (100vw - min(1180px,92vw)) / 2))}
 .cookie-ico{width:38px;height:38px;flex:none;fill:none;stroke:var(--amber);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .cookie-ico circle{fill:var(--amber);stroke:none}
 .cookie-banner p{flex:1;margin:0;font-size:16px;line-height:1.6;color:#fff}
@@ -300,7 +300,8 @@ a.f-logo:hover img{opacity:.8;transform:scale(1.04)}
 .cookie-actions .cookie-accept:hover{background:#fff;border-color:#fff}
 .cookie-actions .cookie-decline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6)}
 .cookie-actions .cookie-decline:hover{background:#fff;color:var(--teal-dark);border-color:#fff}
-body.has-cookie-banner .ombee-a11y-btn{bottom:calc(var(--cookie-h,0px) + 18px)!important;transition:bottom .3s,transform .25s}
+/* תו הנגישות יושב על פס העוגיות, ממורכז לגובהו */
+body.has-cookie-banner .ombee-a11y-btn{bottom:calc((var(--cookie-h,92px) - 46px) / 2)!important;transition:bottom .3s,transform .25s}
 body.menu-open-body .cookie-banner{visibility:hidden}
 html.a11y-contrast .cookie-banner{background:#000;border-top-color:#ffeb3b}
 @media (max-width:640px){
@@ -309,4 +310,6 @@ html.a11y-contrast .cookie-banner{background:#000;border-top-color:#ffeb3b}
   .cookie-banner p{flex:1 1 calc(100% - 46px);font-size:15px}
   .cookie-actions{width:100%}
   .cookie-actions .btn{flex:1}
+  .cookie-banner .cookie-inner{padding-left:60px}
+  body.has-cookie-banner .ombee-a11y-btn{bottom:calc(16px + env(safe-area-inset-bottom))!important;left:4%!important;width:46px!important;height:46px!important}
 }
