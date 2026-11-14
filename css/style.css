@@ -236,18 +236,18 @@ a.f-logo:hover img{opacity:.8;transform:scale(1.04)}
 .social a:hover{background:#1d77c9}
 
 /* באנר עוגיות */
-.cookie-pop{position:fixed;bottom:0;inset-inline:0;z-index:75;background:#fff;box-shadow:0 -8px 28px rgba(6,47,92,.18);padding:9px 4%;display:flex;align-items:center;justify-content:center;gap:14px;animation:cookieIn .45s ease}
+.cookie-pop{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);width:50%;min-width:560px;z-index:75;background:#fff;border-radius:12px;box-shadow:0 10px 36px rgba(6,47,92,.22);padding:12px 18px;display:flex;align-items:center;justify-content:center;gap:12px;animation:cookieIn .45s ease}
 .cookie-pop[hidden]{display:none}
-@keyframes cookieIn{from{opacity:0;transform:translateY(100%)}to{opacity:1;transform:none}}
-.cookie-pop .cookie-ic{flex:none;font-size:20px;line-height:1}
-.cookie-pop p{flex:0 1 auto;font-size:13.5px;color:var(--ink-soft);line-height:1.5;margin:0}
+@keyframes cookieIn{from{opacity:0;transform:translate(-50%,40px)}to{opacity:1;transform:translateX(-50%)}}
+.cookie-pop .cookie-ic{flex:none;font-size:11px;line-height:1}
+.cookie-pop p{flex:0 1 auto;font-size:16px;color:var(--ink-soft);line-height:1.5;margin:0}
 .cookie-actions{display:flex;gap:8px;align-items:center;flex:none;flex-wrap:wrap}
 .cookie-actions .btn{padding:6px 18px;font-size:14px;border-radius:8px}
 .cookie-decline{background:none;border:1.5px solid #cfd8e3;color:var(--ink-soft);border-radius:8px;padding:5px 16px;font-weight:700;font-size:14px;font-family:'Assistant';cursor:pointer;transition:.2s}
 .cookie-decline:hover{border-color:var(--teal);color:var(--teal)}
 .cookie-link{font-size:inherit;color:var(--teal);text-decoration:underline;font-weight:600}
 @media (max-width:640px){
-  .cookie-pop{flex-wrap:wrap;text-align:center;padding:10px 5%;gap:8px}
+  .cookie-pop{width:auto;min-width:0;left:12px;right:12px;bottom:12px;transform:none;flex-wrap:wrap;text-align:center;padding:12px 14px;gap:8px;animation:none}
   .cookie-pop .cookie-ic{display:none}
   .cookie-pop p{flex:1 1 100%}
   .cookie-actions{width:100%;justify-content:center}

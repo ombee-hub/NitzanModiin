@@ -150,7 +150,7 @@
     function liftA11y() {
       var h = cookiePop.hidden ? 0 : cookiePop.offsetHeight;
       var a11yBtn = document.querySelector('.ombee-a11y-btn');
-      if (a11yBtn) a11yBtn.style.bottom = h ? (h + 14) + 'px' : '';
+      if (a11yBtn) a11yBtn.style.bottom = h ? (h + 30) + 'px' : '';
     }
     function closeCookies() { cookiePop.hidden = true; liftA11y(); }
     setTimeout(function () { cookiePop.hidden = false; liftA11y(); }, 800);
