@@ -80,11 +80,11 @@
     '<li>📞 <a href="tel:097601879">09-7601879</a></li>' +
     '<li>✉️ <a href="mailto:diur.modiin@nitzancenter.org">diur.modiin@nitzancenter.org</a></li>' +
     '<li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-inline-end:7px" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>רחוב יגאל ידין 43/7, מודיעין</li>' +
-    '<li><a href="accessibility.html">הצהרת נגישות</a></li>' +
-    '<li><a href="privacy.html">מדיניות פרטיות</a></li></ul></div>' +
+    '</ul></div>' +
     '</div></div>' +
     '</div>' +
     '<div class="f-bottom"><span>&copy; 2012-2026 כל הזכויות שמורות למערך דיור ניצן מודיעין</span>' +
+    '<span class="f-legal"><a href="accessibility.html">הצהרת נגישות</a><span aria-hidden="true">|</span><a href="privacy.html">מדיניות פרטיות</a></span>' +
     '<a class="credit" href="https://ombee.co.il" target="_blank" rel="noopener">עיצוב ובנייה ע"י: <img src="images/ombee-logo.png" alt="OMBee — Graphic Design And UI/UX"></a></div>' +
     '</div></footer>';
 
