@@ -90,8 +90,8 @@
     '<div class="cookie-pop" id="cookiePop" hidden role="dialog" aria-label="הודעת שימוש בעוגיות">' +
     '<span class="cookie-ic" aria-hidden="true">🍪</span>' +
     '<p>אתר זה משתמש בעוגיות (Cookies) כדי לשפר את חוויית הגלישה שלכם. <a href="privacy.html" class="cookie-link">למדיניות הפרטיות</a></p>' +
-    '<div class="cookie-actions"><button class="btn btn-teal" id="cookieOk">קבל/י</button>' +
-    '<button class="cookie-decline" id="cookieNo">דחייה</button></div>' +
+    '<div class="cookie-actions"><button class="btn btn-teal" id="cookieOk">מאשר/ת</button>' +
+    '<button class="cookie-decline" id="cookieNo">ביטול</button></div>' +
     '</div>';
 
   var headerSlot = document.getElementById('site-header');
