@@ -21,9 +21,9 @@
     { id: 'work', label: 'תעסוקה', href: 'work.html' },
     {
       id: 'leisure', label: 'פנאי וחברה', href: 'clubs.html', sub: [
-        { label: 'חוגים', href: 'clubs.html' },
-        { label: 'אירועים ומסיבות', href: 'events.html' },
-        { label: 'טיולים', href: 'trips.html' }
+        { label: 'חוגים', href: 'clubs.html', img: 'illus-leisure' },
+        { label: 'אירועים ומסיבות', href: 'events.html', img: 'illus-events' },
+        { label: 'טיולים', href: 'trips.html', img: 'illus-trips' }
       ]
     },
     { id: 'successes', label: 'סיפורי הצלחה', href: 'successes.html' }
@@ -38,7 +38,7 @@
       h += '<li' + cls + '><a href="' + item.href + '"' + a + '>' + item.label + '</a>';
       if (item.sub) {
         var cards = item.sub.some(function (s) { return s.img; });
-        h += '<ul class="sub' + (cards ? ' sub-cards' : '') + '">';
+        h += '<ul class="sub' + (cards ? ' sub-cards' + (item.sub.length === 3 ? ' sub-cards-3' : '') : '') + '">';
         item.sub.forEach(function (s) {
           var thumb = s.img ? '<span class="sub-thumb"><img src="images/' + s.img + '.webp" alt="" loading="lazy" decoding="async"></span>' : '';
           h += '<li><a href="' + s.href + '">' + thumb + '<span class="sub-label">' + s.label + '</span></a></li>';
