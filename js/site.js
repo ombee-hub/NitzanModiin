@@ -30,7 +30,7 @@
   ];
 
   function navHtml() {
-    var h = '<div class="drawer-head"><img src="images/logo-nitzan.png" alt="ניצן מודיעין"><button class="drawer-close" id="drawerClose" aria-label="סגירת תפריט">✕</button></div>';
+    var h = '<div class="drawer-head"><img src="images/logo-nitzan.webp" alt="ניצן מודיעין"><button class="drawer-close" id="drawerClose" aria-label="סגירת תפריט">✕</button></div>';
     h += '<ul>';
     NAV.forEach(function (item) {
       var cls = item.sub ? ' class="has-sub"' : '';
@@ -49,7 +49,7 @@
 
   var headerHtml =
     '<header class="site" id="siteHeader"><div class="topstrip"></div><div class="container nav">' +
-    '<a class="logo" href="index.html"><img src="images/logo-nitzan.png" alt="ניצן מודיעין"></a>' +
+    '<a class="logo" href="index.html"><img src="images/logo-nitzan.webp" alt="ניצן מודיעין"></a>' +
     '<nav class="main" aria-label="ניווט ראשי">' + navHtml() + '</nav>' +
     '<a href="contact.html" class="btn btn-coral cta-btn">יצירת קשר <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform:rotate(-90deg);flex:none" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>' +
     '<button class="hamburger" aria-label="פתיחת תפריט" id="hamBtn">☰</button>' +
@@ -59,7 +59,7 @@
   var footerHtml =
     '<footer class="site"><div class="container">' +
     '<div class="f-grid">' +
-    '<div><a class="f-logo" href="index.html" aria-label="חזרה לדף הבית"><img src="images/logo-nitzan.png" alt="לוגו ניצן מודיעין"></a>' +
+    '<div><a class="f-logo" href="index.html" aria-label="חזרה לדף הבית"><img src="images/logo-nitzan.webp" alt="לוגו ניצן מודיעין"></a>' +
     '<p>מערך דיור וקהילה שיקומית עבור בוגרים צעירים עם ליקויי למידה, קשיי הסתגלות ותפקוד. בית אמיתי בלב מודיעין, מבית אגודת ניצן.</p>' +
     '<div class="social"><a href="https://www.facebook.com/profile.php?id=100077729597645" target="_blank" rel="noopener" aria-label="פייסבוק">f</a></div></div>' +
     '<div class="f-sitemap">' +
@@ -85,7 +85,7 @@
     '</div>' +
     '<div class="f-bottom"><span>&copy; 2012-2026 כל הזכויות שמורות למערך דיור ניצן מודיעין</span>' +
     '<span class="f-legal"><a href="accessibility.html">הצהרת נגישות</a><span aria-hidden="true">|</span><a href="privacy.html">מדיניות פרטיות</a></span>' +
-    '<a class="credit" href="https://ombee.co.il" target="_blank" rel="noopener">עיצוב ובנייה ע"י: <img src="images/ombee-logo.png" alt="OMBee — Graphic Design And UI/UX"></a></div>' +
+    '<a class="credit" href="https://ombee.co.il" target="_blank" rel="noopener">עיצוב ובנייה ע"י: <img src="images/ombee-logo.webp" alt="OMBee — Graphic Design And UI/UX"></a></div>' +
     '</div></footer>';
 
   var headerSlot = document.getElementById('site-header');
