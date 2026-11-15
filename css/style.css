@@ -123,11 +123,39 @@ section{padding:78px 0}
 .anchor-art{background:#fff}
 .anchor-art img{display:block;width:100%;height:auto}
 .anchor-body{flex:1;display:flex;flex-direction:column;align-items:center;padding:6px 22px 64px;position:relative}
-.anchor-body::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 46' preserveAspectRatio='none'%3E%3Cpath d='M0 14 C110 34 250 4 400 20 L400 46 L0 46Z' fill='%23F7A21B'/%3E%3Cpath d='M0 26 C120 44 260 10 400 18 L400 46 L0 46Z' fill='%230053A0'/%3E%3C/svg%3E") center bottom/100% 100% no-repeat}
+:root{--nz-wave:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 46' preserveAspectRatio='none'%3E%3Cpath d='M0 14 C110 34 250 4 400 20 L400 46 L0 46Z' fill='%23F7A21B'/%3E%3Cpath d='M0 26 C120 44 260 10 400 18 L400 46 L0 46Z' fill='%230053A0'/%3E%3C/svg%3E")}
+.anchor-body::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46px;background:var(--nz-wave) center bottom/100% 100% no-repeat}
 .anchor-card h3{font-size:24px;font-weight:800;color:var(--teal-dark);margin:0 0 12px}
 .anchor-card h3::after{content:"";display:block;width:52px;height:4px;border-radius:4px;background:#F7A21B;margin:12px auto 0}
 .anchor-card p{flex:1;color:var(--ink);font-size:15.5px;line-height:1.65}
 .anchor-card .btn{margin-top:22px;border-radius:12px;font-size:17px;padding:13px 26px}
+
+/* דפי העוגנים (שיקום, תעסוקה, הורים, חוגים) — אותה שפה כמו כרטיסי דף הבית */
+.anchor-page .page-hero .art-hero{max-width:1180px;display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center;text-align:start;padding:56px 0 92px}
+.anchor-page .page-hero .art-hero p{margin-inline:0}
+.hero-art{position:relative;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 22px 50px rgba(0,0,0,.28);padding-bottom:40px}
+.hero-art img{display:block;width:100%;height:auto}
+.hero-art::after{content:"";position:absolute;left:0;right:0;bottom:0;height:40px;background:var(--nz-wave) center bottom/100% 100% no-repeat}
+.anchor-page .sec-head h2::after,.anchor-page .prose h2::after{content:"";display:block;width:52px;height:4px;border-radius:4px;background:#F7A21B;margin:14px auto 0}
+.anchor-page .prose h2::after{margin-inline:0}
+.anchor-page .prose ul li::before{background:#FFF1DC;color:#C26A00}
+.anchor-page .step{background:#fff;border:none;border-radius:24px;box-shadow:0 14px 36px rgba(0,0,0,.25);text-align:center;position:relative;overflow:hidden;padding:30px 24px 70px}
+.anchor-page .step:hover{background:#fff;transform:translateY(-6px)}
+.anchor-page .step::after,.anchor-page .cards .card::after{content:"";position:absolute;left:0;right:0;bottom:0;height:44px;background:var(--nz-wave) center bottom/100% 100% no-repeat}
+.anchor-page .step .n{color:#F7A21B;opacity:1}
+.anchor-page .step h3{color:var(--teal-dark);font-size:21px;font-weight:800}
+.anchor-page .step h3::after,.anchor-page .cards .card h3::after{content:"";display:block;width:40px;height:3px;border-radius:3px;background:#F7A21B;margin:10px auto 0}
+.anchor-page .step p{color:var(--ink);font-size:15.5px}
+.anchor-page .cards .card{text-align:center;overflow:hidden;padding-bottom:70px;border-radius:24px}
+.anchor-page .cards .card .ic{justify-content:center;color:#F7A21B;margin-bottom:16px}
+.anchor-page .cards .card .ic svg{width:52px;height:52px}
+.anchor-page .cards .card h3{font-size:21px;font-weight:800}
+.anchor-page .cards .card p{color:var(--ink)}
+@media (max-width:900px){
+  .anchor-page .page-hero .art-hero{grid-template-columns:1fr;gap:30px;text-align:center;padding:44px 0 80px}
+  .anchor-page .page-hero .art-hero p{margin-inline:auto}
+  .hero-art{max-width:440px;width:100%;margin-inline:auto}
+}
 
 /* גלריה */
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
