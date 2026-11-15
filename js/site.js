@@ -12,10 +12,10 @@
     },
     {
       id: 'shikum', label: 'התהליך השיקומי', href: 'shikum.html', sub: [
-        { label: 'התהליך השיקומי', href: 'shikum.html' },
-        { label: 'הדירות שלנו', href: 'apartments.html' },
-        { label: 'עבודה עם הורים', href: 'parents.html' },
-        { label: 'סדנאות', href: 'workshops.html' }
+        { label: 'התהליך השיקומי', href: 'shikum.html', img: 'illus-rehab' },
+        { label: 'הדירות שלנו', href: 'apartments.html', img: 'illus-apartments' },
+        { label: 'עבודה עם הורים', href: 'parents.html', img: 'illus-parents' },
+        { label: 'סדנאות', href: 'workshops.html', img: 'illus-workshops' }
       ]
     },
     { id: 'work', label: 'תעסוקה', href: 'work.html' },
@@ -37,8 +37,12 @@
       var a = item.id === active ? ' class="active"' : '';
       h += '<li' + cls + '><a href="' + item.href + '"' + a + '>' + item.label + '</a>';
       if (item.sub) {
-        h += '<ul class="sub">';
-        item.sub.forEach(function (s) { h += '<li><a href="' + s.href + '">' + s.label + '</a></li>'; });
+        var cards = item.sub.some(function (s) { return s.img; });
+        h += '<ul class="sub' + (cards ? ' sub-cards' : '') + '">';
+        item.sub.forEach(function (s) {
+          var thumb = s.img ? '<span class="sub-thumb"><img src="images/' + s.img + '.webp" alt="" loading="lazy" decoding="async"></span>' : '';
+          h += '<li><a href="' + s.href + '">' + thumb + '<span class="sub-label">' + s.label + '</span></a></li>';
+        });
         h += '</ul>';
       }
       h += '</li>';
