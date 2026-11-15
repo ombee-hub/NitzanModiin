@@ -132,11 +132,11 @@ section{padding:78px 0}
 
 /* דפי העוגנים (שיקום, תעסוקה, הורים, חוגים) — אותה שפה כמו כרטיסי דף הבית */
 /* האיור משמש כרקע של ראש הדף: ממלא את הצד השמאלי ונמזג לכחול לכיוון הטקסט */
-.anchor-page .page-hero{background:linear-gradient(to left,#1467b8 0%,#0053a0 36%)}
-.anchor-page .page-hero::after{display:none}
-.anchor-page .page-hero .art-hero{position:static;max-width:1180px;display:block;text-align:start;padding:0}
-.anchor-page .page-hero .hero-text{position:relative;z-index:3;width:min(520px,44%);padding:84px 0 120px}
-.anchor-page .page-hero .art-hero p{margin-inline:0}
+.page-hero.has-art{background:linear-gradient(to left,#1467b8 0%,#0053a0 36%)}
+.page-hero.has-art::after{display:none}
+.page-hero.has-art .art-hero{position:static;max-width:1180px;display:block;text-align:start;padding:0}
+.page-hero.has-art .hero-text{position:relative;z-index:3;width:min(520px,44%);padding:84px 0 120px}
+.page-hero.has-art .art-hero p{margin-inline:0}
 .hero-art{position:absolute;z-index:1;top:0;bottom:0;left:0;width:60%;background:#fff;overflow:hidden}
 .hero-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 40%}
 .hero-art::after{content:"";position:absolute;inset:0;background:linear-gradient(to left,#0053a0 0%,rgba(0,83,160,.85) 10%,rgba(0,83,160,0) 38%)}
@@ -156,11 +156,11 @@ section{padding:78px 0}
 .anchor-page .cards .card h3{font-size:21px;font-weight:800}
 .anchor-page .cards .card p{color:var(--ink)}
 @media (max-width:900px){
-  .anchor-page .page-hero .hero-text{width:100%;text-align:center;padding:44px 0 24px}
-  .anchor-page .page-hero .art-hero p{margin-inline:auto}
+  .page-hero.has-art .hero-text{width:100%;text-align:center;padding:44px 0 24px}
+  .page-hero.has-art .art-hero p{margin-inline:auto}
   .hero-art{position:relative;width:auto;height:280px;margin:0 -4.5% 0}
   .hero-art::after{background:linear-gradient(to bottom,#0053a0 0%,rgba(0,83,160,0) 32%)}
-  .anchor-page .page-hero{background:#0053a0}
+  .page-hero.has-art{background:#0053a0}
 }
 
 /* גלריה */
@@ -363,8 +363,4 @@ html.a11y-contrast .cookie-banner{background:#000;border-top-color:#ffeb3b}
   body.has-cookie-banner .ombee-a11y-btn{bottom:calc(16px + env(safe-area-inset-bottom))!important;left:4%!important;width:46px!important;height:46px!important}
 }
 
-/* באנר תמונה מלא בראש דף (הדירות שלנו) */
-.banner-hero{background:#fbf7f1;line-height:0}
-.banner-hero img{display:block;width:100%;height:auto;max-height:640px;object-fit:cover}
 .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-@media (max-width:640px){.banner-hero img{height:235px;object-fit:cover;object-position:center}}
