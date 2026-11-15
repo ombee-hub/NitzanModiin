@@ -5,9 +5,9 @@
   var NAV = [
     {
       id: 'about', label: 'אודות', href: 'about.html', sub: [
-        { label: 'מי אנחנו', href: 'about.html' },
-        { label: 'מטרות', href: 'goals.html' },
-        { label: 'צוות המערך', href: 'staff.html' }
+        { label: 'מי אנחנו', href: 'about.html', img: 'illus-about' },
+        { label: 'מטרות', href: 'goals.html', img: 'illus-goals' },
+        { label: 'צוות המערך', href: 'staff.html', img: 'illus-staff' }
       ]
     },
     {
