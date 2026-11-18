@@ -422,7 +422,7 @@ section:not(.dark-sec) .goal-cards.goal-cards>div{box-shadow:0 12px 32px rgba(6,
 .cta-banner p{font-size:18px;line-height:1.65}
 .cta-banner .side{justify-self:auto;display:flex;align-items:center;gap:36px;padding-inline-start:44px;border-inline-start:1px solid rgba(255,255,255,.35)}
 .cta-banner .side::before{content:"";flex:none;width:190px;height:120px;background:url("../images/cta-art.webp") center/contain no-repeat}
-.cta-banner .btn-light{border-radius:999px;padding:15px 30px;font-size:18px;font-weight:800;color:var(--teal-dark);background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.18);white-space:nowrap}
+.cta-banner .btn-light{border-radius:12px;padding:15px 30px;font-size:18px;font-weight:800;color:var(--teal-dark);background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.18);white-space:nowrap}
 .cta-banner .btn-light svg{display:none}
 @media (max-width:980px){
   .cta-banner{grid-template-columns:1fr;gap:24px;padding:36px 26px 64px}
