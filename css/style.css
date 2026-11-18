@@ -442,3 +442,23 @@ section:not(.dark-sec) .goal-cards.goal-cards>div{box-shadow:0 12px 32px rgba(6,
 .dark-art-img{width:100%;height:auto;filter:drop-shadow(0 0 24px rgba(255,255,255,.18))}
 @media (max-width:900px){.dark-art{grid-template-columns:1fr;gap:24px}.dark-art-img{width:200px;margin:0 auto;order:-1}.dark-sec{padding-bottom:100px!important}.dark-sec::after{height:56px}}
 .dark-sec .split h2::after{content:"";display:block;width:170px;height:14px;margin:10px 0 0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14'%3E%3Cpath d='M4 10 Q100 0 196 10' fill='none' stroke='%23F7A21B' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat}
+
+/* הגדלת תמונות (לייטבוקס) */
+.g-item{cursor:zoom-in}
+.g-item:focus-visible{outline:3px solid #F7A21B;outline-offset:3px}
+.lb{position:fixed;inset:0;z-index:20000;background:rgba(4,22,48,.92);display:flex;align-items:center;justify-content:center;padding:60px 70px}
+.lb[hidden]{display:none}
+.lb-fig{margin:0;max-width:100%;max-height:100%;display:flex;flex-direction:column;align-items:center;gap:12px}
+.lb-fig img{max-width:100%;max-height:calc(100vh - 150px);object-fit:contain;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.5);background:#fff}
+.lb-fig figcaption{color:#fff;font-size:17px;font-weight:600;text-align:center}
+.lb-close,.lb-nav{position:absolute;border:none;cursor:pointer;background:rgba(255,255,255,.14);color:#fff;border-radius:12px;display:grid;place-items:center;transition:background .2s}
+.lb-close:hover,.lb-nav:hover{background:#F7A21B}
+.lb-close{top:18px;left:18px;width:46px;height:46px;font-size:20px}
+.lb-nav{top:50%;transform:translateY(-50%);width:50px;height:64px;font-size:38px;line-height:1}
+.lb-prev{right:14px}
+.lb-next{left:14px}
+.lb-single .lb-nav{display:none}
+.lb-close:focus-visible,.lb-nav:focus-visible{outline:3px solid #F7A21B;outline-offset:2px}
+body.lb-open{overflow:hidden}
+body.lb-open .ombee-a11y-btn{display:none}
+@media (max-width:640px){.lb{padding:60px 10px}.lb-nav{top:auto;bottom:16px;transform:none;width:56px;height:48px}.lb-prev{right:calc(50% + 8px)}.lb-next{left:calc(50% + 8px)}.lb-fig img{max-height:calc(100vh - 200px)}}

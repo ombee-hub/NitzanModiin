@@ -141,4 +141,56 @@
     }, 4200);
   }
 
+
+  /* ===== הגדלת תמונות בגלריות (לייטבוקס) ===== */
+  (function () {
+    var items = Array.prototype.slice.call(document.querySelectorAll('.g-item'));
+    if (!items.length) return;
+    var box = document.createElement('div');
+    box.className = 'lb';
+    box.setAttribute('role', 'dialog');
+    box.setAttribute('aria-modal', 'true');
+    box.setAttribute('aria-label', 'תצוגת תמונה מוגדלת');
+    box.hidden = true;
+    box.innerHTML = '<button class="lb-close" type="button" aria-label="סגירה">✕</button>' +
+      '<button class="lb-nav lb-prev" type="button" aria-label="התמונה הקודמת">‹</button>' +
+      '<figure class="lb-fig"><img alt=""><figcaption></figcaption></figure>' +
+      '<button class="lb-nav lb-next" type="button" aria-label="התמונה הבאה">›</button>';
+    document.body.appendChild(box);
+    var img = box.querySelector('img'), cap = box.querySelector('figcaption');
+    var group = [], idx = 0, lastFocus = null;
+    function show(i) {
+      idx = (i + group.length) % group.length;
+      var it = group[idx], im = it.querySelector('img'), c = it.querySelector('.cap');
+      img.src = im.currentSrc || im.src; img.alt = im.alt || '';
+      cap.textContent = c ? c.textContent : (im.alt || '');
+      box.classList.toggle('lb-single', group.length < 2);
+    }
+    function open(it) {
+      var gal = it.closest('.gallery') || it.parentElement;
+      group = Array.prototype.slice.call(gal.querySelectorAll('.g-item'));
+      lastFocus = document.activeElement;
+      show(group.indexOf(it));
+      box.hidden = false; document.body.classList.add('lb-open');
+      box.querySelector('.lb-close').focus();
+    }
+    function close() { box.hidden = true; document.body.classList.remove('lb-open'); if (lastFocus) lastFocus.focus(); }
+    items.forEach(function (it) {
+      it.setAttribute('tabindex', '0'); it.setAttribute('role', 'button');
+      var im = it.querySelector('img');
+      it.setAttribute('aria-label', 'הגדלת התמונה' + (im && im.alt ? ': ' + im.alt : ''));
+      it.addEventListener('click', function () { open(it); });
+      it.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(it); } });
+    });
+    box.querySelector('.lb-close').addEventListener('click', close);
+    box.querySelector('.lb-prev').addEventListener('click', function () { show(idx - 1); });
+    box.querySelector('.lb-next').addEventListener('click', function () { show(idx + 1); });
+    box.addEventListener('click', function (e) { if (e.target === box) close(); });
+    document.addEventListener('keydown', function (e) {
+      if (box.hidden) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowRight') show(idx - 1);
+      else if (e.key === 'ArrowLeft') show(idx + 1);
+    });
+  })();
 })();
