@@ -407,3 +407,7 @@ section:not(.dark-sec) .goal-cards.goal-cards>div{box-shadow:0 12px 32px rgba(6,
 .goal-cards .goal-svg,.goal-cards.goal-cards>div>.ic{width:108px;height:108px;background:radial-gradient(circle at 35% 30%,#ffffff 0%,#dcebfb 75%);box-shadow:0 6px 18px rgba(0,83,160,.12)}
 .goal-cards .goal-ic{background:transparent}
 .goal-cards mark{white-space:nowrap;background:#dcebfb;color:var(--teal-dark);font-weight:800;padding:1px 8px;border-radius:8px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.topic-chips{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:16px 0 4px;padding:0}
+.topic-chips li{display:inline-flex;align-items:center;gap:8px;background:#e6f0fb;color:var(--teal-dark);font-weight:800;font-size:15px;padding:8px 16px;border-radius:999px;box-shadow:0 2px 8px rgba(0,83,160,.08)}
+.topic-chips svg{width:22px;height:22px;flex:none}
+.goal-cards .chips-more{margin-top:8px}
