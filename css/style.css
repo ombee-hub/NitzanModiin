@@ -386,7 +386,6 @@ html.a11y-contrast .cookie-banner{background:#000;border-top-color:#ffeb3b}
 .goal-cards.goal-cards>div h3::after{content:"";display:block;width:40px;height:3px;border-radius:3px;background:#F7A21B;margin:10px auto 0}
 .goal-cards.goal-cards>div p{color:var(--ink);font-size:15.5px}
 .goal-cards.goal-cards>div::after{content:"";position:absolute;left:0;right:0;bottom:0;height:44px;background:var(--nz-wave) center bottom/100% 100% no-repeat}
-.dark-sec .sec-head h2.swoosh::after{content:"";display:block;width:180px;height:14px;margin:6px auto 0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 14'%3E%3Cpath d='M4 10 C60 2 120 2 176 6' fill='none' stroke='%23F7A21B' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat}
 /* אותו כרטיס גם על רקע בהיר ועם אייקון קו מצויר / אייקון תמונה קטן */
 section:not(.dark-sec) .goal-cards.goal-cards>div{box-shadow:0 12px 32px rgba(6,47,92,.13)}
 .goal-cards .goal-svg{width:96px;height:96px;margin:10px auto 18px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffffff 0%,#e3edf7 70%);display:grid;place-items:center;box-shadow:inset 0 0 0 2px #e3edf7}
@@ -429,3 +428,17 @@ section:not(.dark-sec) .goal-cards.goal-cards>div{box-shadow:0 12px 32px rgba(6,
   .cta-banner .side{justify-self:center;flex-direction:column;gap:18px;padding:22px 0 0;border-inline-start:none;border-top:1px solid rgba(255,255,255,.35)}
   .cta-banner .side::before{width:160px;height:100px}
 }
+
+/* אזורים כהים — לפי הדוגמה של "ליווי הורי": כחול עמוק, תווית לבנה, קשת כתומה מתחת לכותרת וגל בתחתית */
+.dark-sec{position:relative;overflow:hidden;background:radial-gradient(900px 420px at 85% 0%,rgba(29,119,201,.35),transparent 70%),linear-gradient(160deg,#0a3f80 0%,#06306a 55%,#0a3f80 100%);padding-bottom:130px!important}
+.dark-sec::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:80px;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath d='M0 34 C360 4 760 10 1440 26 L1440 80 L0 80Z' fill='%23F7A21B'/%3E%3Cpath d='M0 46 C380 16 780 22 1440 40 L1440 80 L0 80Z' fill='%23ffffff'/%3E%3Cpath d='M0 58 C400 30 800 36 1440 52 L1440 80 L0 80Z' fill='%23fbf7f1'/%3E%3C/svg%3E") center bottom/100% 100% no-repeat}
+.dark-sec>*{position:relative;z-index:1}
+.dark-sec .kicker{background:#fff;color:var(--teal-dark);border:none;font-weight:800;font-size:15px;padding:8px 22px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.dark-sec .sec-head h2,.dark-sec h2{color:#fff;font-size:clamp(28px,3.4vw,44px);font-weight:800}
+.dark-sec .sec-head h2::after{content:"";display:block;width:200px;height:14px;margin:10px auto 0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14'%3E%3Cpath d='M4 10 Q100 0 196 10' fill='none' stroke='%23F7A21B' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat}
+.dark-sec .sec-head p{color:rgba(255,255,255,.9);font-size:19px;line-height:1.7}
+.dark-art{display:grid;grid-template-columns:1fr 300px;gap:48px;align-items:center}
+.dark-art .sec-head{margin:0 auto;max-width:44em}
+.dark-art-img{width:100%;height:auto;filter:drop-shadow(0 0 24px rgba(255,255,255,.18))}
+@media (max-width:900px){.dark-art{grid-template-columns:1fr;gap:24px}.dark-art-img{width:200px;margin:0 auto;order:-1}.dark-sec{padding-bottom:100px!important}.dark-sec::after{height:56px}}
+.dark-sec .split h2::after{content:"";display:block;width:170px;height:14px;margin:10px 0 0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14'%3E%3Cpath d='M4 10 Q100 0 196 10' fill='none' stroke='%23F7A21B' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat}
