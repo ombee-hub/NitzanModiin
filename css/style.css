@@ -406,3 +406,4 @@ section:not(.dark-sec) .goal-cards.goal-cards>div{box-shadow:0 12px 32px rgba(6,
 .goal-cards .card-art{display:block;width:100%;max-width:300px;height:auto;margin:4px auto 14px;mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(ellipse 58% 60% at 50% 50%,#000 70%,transparent 100%);mask-image:radial-gradient(ellipse 58% 60% at 50% 50%,#000 70%,transparent 100%)}
 .goal-cards .goal-svg,.goal-cards.goal-cards>div>.ic{width:108px;height:108px;background:radial-gradient(circle at 35% 30%,#ffffff 0%,#dcebfb 75%);box-shadow:0 6px 18px rgba(0,83,160,.12)}
 .goal-cards .goal-ic{background:transparent}
+.goal-cards mark{white-space:nowrap;background:#dcebfb;color:var(--teal-dark);font-weight:800;padding:1px 8px;border-radius:8px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
